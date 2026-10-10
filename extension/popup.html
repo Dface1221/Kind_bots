@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tabs to Trails</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 16px;
+      font-family: system-ui, sans-serif;
+      color: #1f2937;
+      background-color: #faf9f6;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #214631;
+    }
+    .tabs-list {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+      border: 1px solid #e6dfcf;
+      border-radius: 8px;
+      background: white;
+    }
+    .tab-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-bottom: 1px solid #e6dfcf;
+      gap: 10px;
+    }
+    .tab-item:last-child {
+      border-bottom: none;
+    }
+    .tab-item label {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .tab-item input[type="checkbox"] {
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #428b60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #306e49;
+    }
+    button:disabled {
+      background-color: #93c7a6;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    .success { color: #428b60; }
+    .error { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <h2>Select Tabs to Import</h2>
+  <div class="tabs-list" id="tabsList">
+    <!-- Tabs will be populated here -->
+  </div>
+  <button id="importBtn">Send to Local Backend</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

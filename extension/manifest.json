@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Tabs to Trails",
+  "version": "0.1.0",
+  "description": "Turn browser tabs into narrated audio walking experiences.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tabs to Trails"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabstotrails@local",
+      "strict_min_version": "109.0"
+    }
+  }
+}
